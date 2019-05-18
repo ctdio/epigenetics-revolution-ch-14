@@ -1,0 +1,36 @@
+{
+  "name": "epigenetics-ch-14-presentation",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "mdx-deck index.mdx",
+    "build": "mdx-deck build index.mdx",
+    "prettify": "prettier --write '**/*.{js,json,mdx}'",
+    "deploy": "now"
+  },
+  "dependencies": {
+    "mdx-deck": "^2.3.2"
+  },
+  "devDependencies": {
+    "@now/mdx-deck": "^0.5.4",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "now": "^15.2.0",
+    "prettier": "^1.17.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false
+  },
+  "lint-staged": {
+    "*.{js,json,mdx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

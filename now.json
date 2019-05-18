@@ -1,0 +1,8 @@
+{
+  "name": "epigenetics-revolution-ch-14-deck",
+  "version": 2,
+  "builds": [
+    { "src": "index.mdx", "use": "@now/mdx-deck" },
+    { "src": "assets/*", "use": "@now/static" }
+  ]
+}
